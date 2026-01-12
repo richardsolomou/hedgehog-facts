@@ -1,47 +1,24 @@
-# template-tanstack-start
+# Hedgehog Facts
 
-🚀 Full-stack template with TanStack Start. Includes SSR, file-based routing, and modern tooling.
+AI-powered hedgehog facts app built with TanStack Start and Google Gemini.
 
-## Features
+## Setup
 
-- **[TanStack Start](https://tanstack.com/start)** - Full-stack React framework with SSR
-- **TypeScript** - End-to-end type safety
-- **Tailwind CSS v4** + **@ras-sh/ui** - Modern styling and components
+1. Copy `.env.example` to `.env` and add your Google API key:
+   ```
+   GOOGLE_API_KEY=your_api_key_here
+   ```
 
-## Quick Start
+2. Install dependencies and run:
+   ```bash
+   pnpm install
+   pnpm dev
+   ```
 
-```bash
-pnpm install
-pnpm dev
-```
+3. Open http://localhost:5173
 
-## Building Your App
+## Tech Stack
 
-1. Build routes in `src/routes/` with SSR loaders
-2. Add components in `src/components/`
-3. Update `package.json` and branding assets
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server (port 5173) |
-| `pnpm build` | Build for production |
-| `pnpm preview` | Preview production build |
-| `pnpm check-types` | Run TypeScript type checking |
-| `pnpm check` | Run linter checks |
-| `pnpm fix` | Auto-fix linting issues |
-
-## Project Structure
-
-```
-src/
-├── routes/         # File-based routing with SSR loaders
-├── components/     # Reusable components
-├── lib/            # Utilities (SEO helper, etc.)
-└── router.tsx      # Router configuration
-```
-
-## License
-
-MIT License - see the [LICENSE](LICENSE) file for details.
+- TanStack Start (React)
+- Google Gemini via @posthog/ai
+- Tailwind CSS

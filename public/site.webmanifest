@@ -1,6 +1,6 @@
 {
-  "name": "template-tanstack-start",
-  "short_name": "template-tanstack-start",
+  "name": "Hedgehog Facts",
+  "short_name": "Hedgehog Facts",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#09090b",
-  "background_color": "#09090b",
+  "theme_color": "#1d1f27",
+  "background_color": "#1d1f27",
   "display": "standalone"
 }

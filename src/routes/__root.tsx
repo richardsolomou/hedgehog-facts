@@ -17,9 +17,8 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       ...seo({
-        title: "template-tanstack-start",
-        description:
-          "🚀 Full-stack template with TanStack Start. Includes SSR, file-based routing, and modern tooling.",
+        title: "Hedgehog Facts",
+        description: "Discover fascinating AI-generated facts about hedgehogs.",
       }),
     ],
     links: [

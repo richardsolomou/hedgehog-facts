@@ -1,18 +1,18 @@
 {
-  "name": "template-tanstack-start",
-  "version": "0.0.3",
+  "name": "hedgehog-facts",
+  "version": "0.0.1",
   "type": "module",
   "private": true,
-  "description": "Template for TanStack Start projects.",
+  "description": "AI-powered hedgehog facts app",
   "keywords": [],
   "homepage": "https://solomou.dev",
   "bugs": {
-    "url": "https://github.com/richardsolomou/template-tanstack-start/issues",
+    "url": "https://github.com/richardsolomou/hedgehog-facts/issues",
     "email": "richard@solomou.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/richardsolomou/template-tanstack-start"
+    "url": "https://github.com/richardsolomou/hedgehog-facts"
   },
   "license": "MIT",
   "author": {
@@ -31,9 +31,11 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
-    "@ras-sh/ui": "^0.0.6",
+    "@google/genai": "^1.35.0",
+    "@posthog/ai": "^7.4.2",
     "@tanstack/react-router": "^1.147.3",
     "@tanstack/react-start": "^1.149.2",
+    "posthog-node": "^5.20.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
