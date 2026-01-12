@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { getHedgehogFact } from "~/lib/ai";
 
 export const Route = createFileRoute("/")({
@@ -8,22 +8,29 @@ export const Route = createFileRoute("/")({
 
 export default function Home() {
   const [fact, setFact] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const hasFetched = useRef(false);
 
   const fetchFact = useCallback(async () => {
     setIsLoading(true);
+    setError(null);
     try {
       const result = await getHedgehogFact();
       setFact(result.fact);
-    } catch (error) {
-      console.error("Failed to fetch fact:", error);
-      setFact("Hedgehogs can run up to 4 miles per hour!");
+    } catch (err) {
+      console.error("Failed to fetch fact:", err);
+      setError("Failed to fetch fact. Please try again.");
     } finally {
       setIsLoading(false);
     }
   }, []);
 
   useEffect(() => {
+    if (hasFetched.current) {
+      return;
+    }
+    hasFetched.current = true;
     fetchFact();
   }, [fetchFact]);
 
@@ -35,9 +42,13 @@ export default function Home() {
         <h1 className="mb-6 font-bold text-3xl text-white">Hedgehog Facts</h1>
 
         <div className="flex h-[6lh] items-center justify-center">
-          {isLoading ? (
+          {isLoading && (
             <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#F9BD2B]/30 border-t-[#F9BD2B]" />
-          ) : (
+          )}
+          {!isLoading && error && (
+            <p className="text-lg text-red-400">{error}</p>
+          )}
+          {!(isLoading || error) && (
             <p className="line-clamp-4 text-[#C4C4C4] text-lg leading-relaxed">
               {fact}
             </p>
