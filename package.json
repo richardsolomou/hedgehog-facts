@@ -33,8 +33,10 @@
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@google/genai": "^1.35.0",
     "@posthog/ai": "^7.4.2",
+    "@posthog/react": "^1.5.2",
     "@tanstack/react-router": "^1.147.3",
     "@tanstack/react-start": "^1.149.2",
+    "posthog-js": "^1.319.0",
     "posthog-node": "^5.20.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
