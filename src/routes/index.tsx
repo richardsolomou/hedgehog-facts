@@ -53,6 +53,25 @@ export default function Home() {
           {isLoading ? "Loading..." : "Another fact"}
         </button>
       </main>
+
+      <footer className="absolute bottom-6 inline-flex flex-wrap items-center justify-center gap-1 text-center text-sm text-zinc-400">
+        Made with ❤️ by{" "}
+        <a
+          className="inline-flex items-center gap-1 font-medium underline decoration-zinc-600 underline-offset-2 transition-colors hover:text-zinc-100 hover:decoration-zinc-400"
+          href="https://solomou.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Richard Solomou"
+            className="size-5 rounded-full"
+            height={20}
+            src="https://github.com/richardsolomou.png"
+            width={20}
+          />
+          @richardsolomou
+        </a>
+      </footer>
     </div>
   );
 }
