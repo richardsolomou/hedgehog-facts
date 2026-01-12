@@ -17,11 +17,11 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-type Todo = {
+interface Todo {
   id: string;
   text: string;
   isCompleted: boolean;
-};
+}
 
 function TodoForm({ onAdd }: { onAdd: (text: string) => void }) {
   const [newTodo, setNewTodo] = useState("");
