@@ -1,20 +1,17 @@
 import { GoogleGenAI } from "@posthog/ai";
 import { createServerFn } from "@tanstack/react-start";
 import { PostHog } from "posthog-node";
-import { requireEnv } from "./env";
 
 const MODEL = "gemini-2.5-flash-lite";
 const POSTHOG_TEAM_ID = "280346";
 const PROMPT_NAME = "hedgehog-facts";
 
 async function getPromptFromPostHog(): Promise<string> {
-  const apiKey = requireEnv("POSTHOG_PERSONAL_API_KEY");
-
   const response = await fetch(
     `https://app.posthog.com/api/environments/${POSTHOG_TEAM_ID}/llm_prompts/name/${PROMPT_NAME}/`,
     {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${process.env.POSTHOG_PERSONAL_API_KEY}`,
       },
     }
   );
@@ -29,14 +26,12 @@ async function getPromptFromPostHog(): Promise<string> {
 
 export const getHedgehogFact = createServerFn({ method: "GET" }).handler(
   async () => {
-    const apiKey = requireEnv("GOOGLE_API_KEY");
-
-    const phClient = new PostHog("sTMFPsFhdP1Ssg", {
+    const phClient = new PostHog(process.env.VITE_POSTHOG_KEY || "", {
       host: "https://us.i.posthog.com",
     });
 
     const client = new GoogleGenAI({
-      apiKey,
+      apiKey: process.env.GOOGLE_API_KEY,
       posthog: phClient,
     });
 
