@@ -31,30 +31,30 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
-    "@google/genai": "^1.36.0",
-    "@posthog/ai": "^7.4.2",
-    "@posthog/react": "^1.5.2",
-    "@tanstack/react-router": "^1.150.0",
-    "@tanstack/react-start": "^1.150.0",
-    "posthog-js": "^1.321.2",
-    "posthog-node": "^5.21.0",
+    "@google/genai": "^1.38.0",
+    "@posthog/ai": "^7.5.4",
+    "@posthog/react": "^1.7.0",
+    "@tanstack/react-router": "^1.157.14",
+    "@tanstack/react-start": "^1.157.14",
+    "posthog-js": "^1.335.2",
+    "posthog-node": "^5.24.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.11",
+    "@biomejs/biome": "^2.3.12",
     "@ras-sh/typescript-config": "^0.0.3",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/node": "^25.0.8",
-    "@types/react": "^19.2.8",
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
     "lefthook": "^2.0.15",
     "nitro": "3.0.1-alpha.1",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "ultracite": "7.0.11",
+    "ultracite": "7.0.12",
     "vite": "^7.3.1",
-    "vite-tsconfig-paths": "^6.0.4"
+    "vite-tsconfig-paths": "^6.0.5"
   }
 }
