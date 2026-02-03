@@ -7,7 +7,7 @@ AI-powered hedgehog facts app built with TanStack Start and Google Gemini, with 
 1. Copy `.env.example` to `.env` and configure the required environment variables:
    ```
    VITE_POSTHOG_KEY=your_posthog_project_api_key
-   GOOGLE_API_KEY=your_google_api_key
+   GEMINI_API_KEY=your_gemini_api_key
    POSTHOG_PERSONAL_API_KEY=your_posthog_personal_api_key
    ```
 

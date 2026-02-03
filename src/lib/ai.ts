@@ -31,7 +31,7 @@ export const getHedgehogFact = createServerFn({ method: "GET" }).handler(
     });
 
     const client = new GoogleGenAI({
-      apiKey: process.env.GOOGLE_API_KEY,
+      apiKey: process.env.GEMINI_API_KEY,
       posthog: phClient,
     });
 
