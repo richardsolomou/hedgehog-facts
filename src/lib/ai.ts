@@ -3,7 +3,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { PostHog } from "posthog-node";
 
 const MODEL = "gemini-2.5-flash-lite";
-const PROMPT_NAME = "hedgehog-facts";
+const PROMPT_NAME = "creature-facts";
 
 export const getHedgehogFact = createServerFn({ method: "GET" }).handler(
   async () => {
@@ -23,8 +23,12 @@ export const getHedgehogFact = createServerFn({ method: "GET" }).handler(
     });
 
     try {
-      const prompt = await prompts.get(PROMPT_NAME, {
+      const template = await prompts.get(PROMPT_NAME, {
         fallback: "Error out.",
+      });
+
+      const prompt = prompts.compile(template, {
+        creatures: "hedgehogs",
       });
 
       const response = await client.models.generateContent({
